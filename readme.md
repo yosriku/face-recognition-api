@@ -1,5 +1,3 @@
-Face Recognition API – Widya Robotics AI Engineer Test 2025
-
 # Face Recognition API 
 
 This is an end-to-end face recognition system based on deep learning.  
@@ -39,6 +37,11 @@ git clone https://github.com/yosriku/face-recognition-api.git
 cd face-recognition-api
 ```
 
+#### (Optional) Login to docker
+```bash
+docker login
+```
+
 #### Run Docker Compose:
 ```bash
 docker-compose up
@@ -56,17 +59,6 @@ After startup:
 
 Click the dropdown according to the endpoint function and click Try Out to test the endpoint.
 
-
-
-
-
-
-
-
-
-Tanya ChatGPT
-
-
 ### 1. **Register a Face**
 `POST /api/face/register`
 
@@ -78,7 +70,7 @@ Tanya ChatGPT
 ```json
 {
   "id": 1,
-  "name": "John Doe"
+  "name": "Yosriko"
 }
 ```
 
@@ -91,7 +83,7 @@ Tanya ChatGPT
 **Response (Match Found):**
 ```json
 {
-  "matched_name": "John Doe",
+  "matched_name": "Yosriko",
   "similarity": 0.9231
 }
 ```
@@ -111,11 +103,11 @@ Tanya ChatGPT
 [
   {
     "id": 1,
-    "name": "John Doe"
+    "name": "Yosriko"
   },
   {
     "id": 2,
-    "name": "Jane Doe"
+    "name": "Henry Cavill"
   }
 ]
 ```
