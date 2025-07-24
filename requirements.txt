@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+onnxruntime
+opencv-python
+numpy
+python-multipart
+pydantic
+MTCNN
+tensorflow
+keras-facenet
+scipy
