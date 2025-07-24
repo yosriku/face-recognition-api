@@ -2,32 +2,25 @@ version: '3.8'
 
 services:
   api:
-    build: .
+    image: yosiko/face-recognition:mtcnn_facenet
     ports:
       - "8000:8000"
-    volumes:
-      - .:/app
-    env_file:
-      - ./.env
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/face_db
     depends_on:
-      db:
-        condition: service_healthy
+      - db
 
   db:
     image: postgres:13
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
+    restart: always
     environment:
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=face_db
     ports:
       - "5432:5432"
-    healthcheck:
-      test: ["CMD", "pg_isready", "-U", "user", "-d", "face_db"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 
 volumes:
   postgres_data:
