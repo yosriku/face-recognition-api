@@ -150,5 +150,5 @@ Click the dropdown according to the endpoint function and click Try Out to test 
 
 ## ✅ Author
 Developed by **Yosriko Rahmat Karoni Sabelekake**  
-For **Widya Robotics AI Engineer Knowledge Test**
+For **Widya Group AI Engineer Knowledge Test**
 
